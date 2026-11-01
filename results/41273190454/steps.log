@@ -1,0 +1,9 @@
+[1] OPEN https://apartmentiq-web.vercel.app/?society=gaur-alaris-phase-1&t=planned:alaris-gaudium
+[3] SHOT 01-tower-view.png
+[4] MISSING 'Scores' (not in the UI tree)
+[6] SHOT 02-scores.png
+[7] MISSING 'Legend' (not in the UI tree)
+[9] SHOT 03-legend.png
+[10] BACK
+[12] OPEN https://apartmentiq-web.vercel.app/?society=gaur-alaris-phase-1&t=planned:alaris-gaudium&f=5&u=u-a&view=inside
+[14] SHOT 04-apartment-inside.png

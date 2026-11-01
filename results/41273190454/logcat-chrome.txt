@@ -1,0 +1,38 @@
+--------- beginning of main
+11-01 04:29:30.976  1766  2502 W chromium: [1101/042930.976305:WARNING:dns_config_service_android.cc(81)] Failed to read DnsConfig.
+11-01 04:29:32.363  1959  2597 W chromium: [WARNING:dns_config_service_android.cc(115)] Failed to read DnsConfig.
+11-01 04:29:32.469  1959  1959 I chromium: [INFO:policy_logger.cc(142)] :components/enterprise/browser/controller/chrome_browser_cloud_management_controller.cc(272) Deferring CBCM Controller Initialization until it is unblocked.
+11-01 04:29:48.015  1959  1959 W chromium: [WARNING:controller_impl.cc(1188)] Background download complete, client: 6, completion type: 0, file size:265059
+11-01 04:29:48.043  1959  1959 W chromium: [WARNING:controller_impl.cc(1188)] Background download complete, client: 6, completion type: 0, file size:5398
+11-01 04:29:48.574  1959  1959 W chromium: [WARNING:controller_impl.cc(1188)] Background download complete, client: 6, completion type: 0, file size:5225
+11-01 04:29:48.710  1959  1959 W chromium: [WARNING:controller_impl.cc(1188)] Background download complete, client: 6, completion type: 0, file size:5112
+11-01 04:29:49.219  1959  1959 W chromium: [WARNING:controller_impl.cc(1188)] Background download complete, client: 6, completion type: 0, file size:5154
+11-01 04:29:49.421  1959  1959 W chromium: [WARNING:controller_impl.cc(1188)] Background download complete, client: 6, completion type: 0, file size:45147
+11-01 04:29:49.488  3777  3827 I chromium: [INFO:child_process_service.cc(69)] ChildProcessService: Exiting child process.
+11-01 04:29:49.612  1959  1959 W chromium: [WARNING:compositor_view.cc(341)] Child process died (type=6) pid=3777)
+11-01 04:29:50.469  3829  3908 I chromium: [INFO:child_process_service.cc(69)] ChildProcessService: Exiting child process.
+11-01 04:29:50.604  1959  1959 W chromium: [WARNING:compositor_view.cc(341)] Child process died (type=6) pid=3829)
+11-01 04:29:51.901  3884  4007 I chromium: [INFO:child_process_service.cc(69)] ChildProcessService: Exiting child process.
+11-01 04:29:52.151  1959  1959 W chromium: [WARNING:compositor_view.cc(341)] Child process died (type=6) pid=3884)
+11-01 04:29:52.321  3923  4008 I chromium: [INFO:child_process_service.cc(69)] ChildProcessService: Exiting child process.
+11-01 04:29:52.442  3917  4045 I chromium: [INFO:child_process_service.cc(69)] ChildProcessService: Exiting child process.
+11-01 04:29:52.517  3925  4056 I chromium: [INFO:child_process_service.cc(69)] ChildProcessService: Exiting child process.
+11-01 04:29:52.584  1959  1959 W chromium: [WARNING:compositor_view.cc(341)] Child process died (type=6) pid=3923)
+11-01 04:29:52.589  1959  1959 W chromium: [WARNING:compositor_view.cc(341)] Child process died (type=6) pid=3925)
+11-01 04:29:52.646  1959  1959 W chromium: [WARNING:compositor_view.cc(341)] Child process died (type=6) pid=3917)
+11-01 04:30:37.864  5111  5128 I chromium: [INFO:child_process_service.cc(69)] ChildProcessService: Exiting child process.
+11-01 04:30:37.918  1959  1959 W chromium: [WARNING:compositor_view.cc(341)] Child process died (type=6) pid=5111)
+11-01 04:30:42.668  5170  5186 I chromium: [INFO:child_process_service.cc(69)] ChildProcessService: Exiting child process.
+11-01 04:30:42.717  1959  1959 W chromium: [WARNING:compositor_view.cc(341)] Child process died (type=6) pid=5170)
+11-01 04:31:00.647  5413  5440 I chromium: [INFO:child_process_service.cc(69)] ChildProcessService: Exiting child process.
+11-01 04:31:00.709  1959  1959 W chromium: [WARNING:compositor_view.cc(341)] Child process died (type=6) pid=5413)
+11-01 04:31:14.255  5594  5605 I chromium: [INFO:child_process_service.cc(69)] ChildProcessService: Exiting child process.
+11-01 04:31:14.267  1959  1959 W chromium: [WARNING:compositor_view.cc(341)] Child process died (type=6) pid=5594)
+11-01 04:31:26.644  5767  5806 I chromium: [INFO:child_process_service.cc(69)] ChildProcessService: Exiting child process.
+11-01 04:31:26.703  1959  1959 W chromium: [WARNING:compositor_view.cc(341)] Child process died (type=6) pid=5767)
+11-01 04:31:39.340  6008  6026 I chromium: [INFO:child_process_service.cc(69)] ChildProcessService: Exiting child process.
+11-01 04:31:39.362  1959  1959 W chromium: [WARNING:compositor_view.cc(341)] Child process died (type=6) pid=6008)
+11-01 04:31:52.384  6377  6388 I chromium: [INFO:child_process_service.cc(69)] ChildProcessService: Exiting child process.
+11-01 04:31:52.405  1959  1959 W chromium: [WARNING:compositor_view.cc(341)] Child process died (type=6) pid=6377)
+11-01 04:31:56.369  2734  2816 E chromium: [ERROR:gles2_cmd_decoder.cc(8675)] [.WebGL-0x118a003e4700]GL ERROR :GL_INVALID_VALUE : glFramebufferTexture2D: <- error from previous GL command
+11-01 04:31:59.900  2734  2816 E chromium: [ERROR:buffer_manager.cc(489)] [.WebGL-0x118a00a1a900]GL ERROR :GL_INVALID_VALUE : glBufferData: <- error from previous GL command
