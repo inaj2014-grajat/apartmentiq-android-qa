@@ -1,0 +1,15 @@
+# One step per line: shot <name> | url <url> | tap <exact text> | wait <seconds> | back
+url https://apartmentiq-web.vercel.app/?society=gaur-alaris-phase-1&t=planned:alaris-gaudium
+wait 45
+shot 01-tower-view
+tap Scores
+wait 6
+shot 02-scores
+tap Legend
+wait 4
+shot 03-legend
+back
+wait 3
+url https://apartmentiq-web.vercel.app/?society=gaur-alaris-phase-1&t=planned:alaris-gaudium&f=5&u=u-a&view=inside
+wait 45
+shot 04-apartment-inside

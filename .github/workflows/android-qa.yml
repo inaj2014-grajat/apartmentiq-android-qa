@@ -1,0 +1,55 @@
+# ApartmentIQ Android check (cos-bae93e6e, Rajat 2026-11-01).
+# Boots a real Android emulator on a GitHub runner, opens the site in Chrome,
+# taps the controls named in qa/steps.txt, and commits screenshots, UI dumps
+# and logcat to the `results` branch under results/<run id>/.
+name: android-qa
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: android-qa
+  cancel-in-progress: false
+jobs:
+  qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - name: Enable KVM
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+          ls -l /dev/kvm || echo "NO KVM"
+      - name: Run on emulator
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 34
+          target: google_apis
+          arch: x86_64
+          profile: pixel_6
+          disable-animations: true
+          emulator-options: -no-window -gpu swiftshader_indirect -no-snapshot -noaudio -no-boot-anim
+          script: bash qa/run.sh
+      - name: Save results to the results branch
+        if: always()
+        run: |
+          set -x
+          [ -d out ] || mkdir out
+          echo "run ${GITHUB_RUN_ID} sha ${GITHUB_SHA} at $(date -u +%FT%TZ)" > out/RUN.txt
+          git config user.name "android-qa"
+          git config user.email "android-qa@users.noreply.github.com"
+          git fetch origin results || true
+          if git rev-parse --verify origin/results >/dev/null 2>&1; then
+            git checkout -B results origin/results
+          else
+            git checkout --orphan results && git rm -rf . >/dev/null 2>&1 || true
+          fi
+          mkdir -p "results/${GITHUB_RUN_ID}"
+          cp -r out/. "results/${GITHUB_RUN_ID}/"
+          echo "${GITHUB_RUN_ID}" > results/LATEST
+          git add results
+          git commit -m "android-qa results ${GITHUB_RUN_ID}" && git push origin results
