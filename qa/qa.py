@@ -57,10 +57,12 @@ def main(steps, out):
             adb("shell", "input", "keyevent", "4")
             print(f"[{n}] BACK")
         elif op == "shot":
+            clear_fre(out)
             adb("exec-out", "screencap", "-p", out=f"{out}/{arg}.png")
             dump(f"{out}/{arg}.xml")
             print(f"[{n}] SHOT {arg}.png")
         elif op == "tap":
+            clear_fre(out)
             root = dump(f"{out}/_tap{n}.xml")
             hit = find(root, arg)
             if hit:
